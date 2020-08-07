@@ -1,0 +1,24 @@
+{
+  "name": "uni-cloud-admin",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "goSass": "sass --watch ./static/style/main.sass ./static/style/main.css"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "aos": "^2.3.4",
+    "echarts": "^4.8.0",
+    "element-ui": "^2.13.0",
+    "hls.js": "^0.13.2",
+    "marked": "^1.1.1",
+    "mavon-editor": "^2.9.0",
+    "scrollprogress": "^3.0.2",
+    "v-charts": "^1.19.0",
+    "vue-aplayer": "^1.6.1"
+  },
+  "devDependencies": {}
+}

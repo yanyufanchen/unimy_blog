@@ -1,0 +1,192 @@
+{
+	"admin": {
+		"data": [ // 数据
+			{
+				"password": "123456",
+				"username": "admin",
+				"creattime": 1591530730926,
+				"status": "管理员"
+			}
+		],
+		"index": [{ // 索引
+			"IndexName": "username", // 索引名称
+			"MgoKeySchema": { // 索引规则
+				"MgoIndexKeys": [{
+					"Name": "username", // 索引字段
+					"Direction": "1" // 索引方向，1：ASC-升序，-1：DESC-降序
+				}],
+				"MgoIsUnique": true // 索引是否唯一
+			}
+		}]
+	},
+	"article": {
+		"data": [{
+			"title": "vue112212121",
+			"content": "testtesttesttesttesttest",
+			"cate_id": 1,
+			"content":"111",
+			"info":"1",
+			"imageUrl":"1",
+			"create_date": 1590909755111,
+			"delete_date": "0"
+		}]
+	},
+	"articleCate": {
+		"data": [{
+			"cate_id": 1,
+			"creattime": 1590910178079,
+			"name": "Vue技术文",
+			"icon": "pc"
+		}, {
+			"cate_id": 2,
+			"creattime": 1590910171111,
+			"name": "小程序技术文",
+			"icon": "mb"
+		}],
+		"index": [{ // 索引
+			"IndexName": "cate_id", // 索引名称
+			"MgoKeySchema": { // 索引规则
+				"MgoIndexKeys": [{
+					"Name": "cate_id", // 索引字段
+					"Direction": "1" // 索引方向，1：ASC-升序，-1：DESC-降序
+				}],
+				"MgoIsUnique": true // 索引是否唯一
+			}
+		}]
+	},
+	"project": {
+		"data": [{
+			"cate_id": 1,
+			"creattime": 1590910178079,
+			"delete_date": "0",
+			"name": "Vue后台管理系统admin",
+			"imageUrl":"1",
+			"intro": "我最近是在自己写一个博客系统，然后里面的博客编写使用的是markdown语言。在写博客的时候，使用的是mavon-editor组件，所以主要要解决的是博客在前端展示界面的问题。",
+			"porjectUrl": "https://www.cnblogs.com/yhquan/p/10276811.html",
+			"sourceUrl": "https://blog.csdn.net"
+		}, {
+			"cate_id": 2,
+			"creattime": 1590910178079,
+			"delete_date": "0",
+			"imageUrl":"1",
+			"name": "nodejs服务端开发项目",
+			"intro": "采用sequelize模型对象开发的nodejs服务器数据接口",
+			"projectUrl": "https://www.cnblogs.com/yhquan/p/10276811.html",
+			"sourceUrl": "https://blog.csdn.net"
+		}]
+	},
+	"projectCate": {
+		"data": [{
+			"cate_id": 1,
+			"creattime": 1590910178079,
+			"name": "PC端",
+			"icon": "pc"
+		}, {
+			"cate_id": 2,
+			"creattime": 1590910171111,
+			"name": "服务端",
+			"icon": "mb"
+		}],
+		"index": [{ // 索引
+			"IndexName": "cate_id", // 索引名称
+			"MgoKeySchema": { // 索引规则
+				"MgoIndexKeys": [{
+					"Name": "cate_id", // 索引字段
+					"Direction": "1" // 索引方向，1：ASC-升序，-1：DESC-降序
+				}],
+				"MgoIsUnique": true // 索引是否唯一
+			}
+		}]
+	},
+	"myMessage": {
+		"data": [{
+			"headerImg": "",
+			"nickname": "",
+			"birthday": "",
+			"six": "",
+			"info": "",
+			"create_date": ""
+		}]
+	},
+	"mySkill": {
+		"data": [{
+			"skillName": "HTML5/CSS3",
+			"skillPercentage": 85,
+			"echartColor": "#409EFF"
+		}]
+	},
+	"log": {
+		"data": [{
+			"title": "建站历程",
+			"content": "testtesttesttesttesttest",
+			"state": 1,
+			"create_date": 1590909755111,
+			"delete_date": "0"
+		},{
+			"title": "更新日志",
+			"content": "testtesttesttesttesttest",
+			"state": 2,
+			"create_date": 1590909755222,
+			"delete_date": "0"
+		}]
+	},
+	"deskTheme": {
+		"data": [{
+			"ThemeColor": "#00ced1"
+		}]
+	},
+	"articleReadNum": {
+		"data": [{
+			"articleId":"5ed66d7b0fc902004d3e1875",
+			"ReadNum": 1
+		}]
+	},
+	"articleGiveNum": {
+		"data": [{
+			"articleId":"5ed66d7b0fc902004d3e1875",
+			"GiveNum": 1
+		}]
+	},
+	"websizeCount": {
+		"data": [{
+			"timestr": "2019-12",
+			"timestamp":1575203026000,
+			"Count": 56
+		},{
+			"timestr": "2020-01",
+			"timestamp":1577881426000,
+			"Count": 40
+		},{
+			"timestr": "2020-02",
+			"timestamp":1580559826000,
+			"Count": 67
+		},{
+			"timestr": "2020-03",
+			"timestamp":1583065426000,
+			"Count": 51
+		},{
+			"timestr": "2020-04",
+			"timestamp":1585743826000,
+			"Count": 29
+		},{
+			"timestr": "2020-05",
+			"timestamp":1588335826000,
+			"Count": 34
+		},{
+			"timestr": "2020-06",
+			"timestamp":1591014226000,
+			"Count": 25
+		}]
+	},
+	"webLink": {
+		"data": [{
+			"state":1, // 1-技术支持 2-友情链接 3-广告位
+			"imageUrl":"1",
+			"name":"11",
+			"info":"111",
+			"webUrl":"",
+			"create_time":1588335826000,
+			"projectUrl":""
+		}]
+	}
+}

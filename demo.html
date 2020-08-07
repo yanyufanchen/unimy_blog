@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<meta name="description" content="Web前端开发:一个分享前端开发技术,记录学习和成长的博客,博客文章的前端个人博客网站！">
+		<meta name="keywords" content="王朋前端博客,web前端博客,web前端开发,小程序开发,Reactjs开发,Vuejs开发,ReactNative开发,Nodejs开发,专注前端技术">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <title>
+            <%= htmlWebpackPlugin.options.title %>
+        </title>
+		<link rel=icon href="https://www.pengwang.xyz/logo.png">
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                document.documentElement.style.fontSize = document.documentElement.clientWidth / 20 + 'px'
+            })
+        </script>
+        <link rel="stylesheet" href="<%= BASE_URL %>static/index.<%= VUE_APP_INDEX_CSS_HASH %>.css" />
+    </head>
+    <body>
+        <noscript>
+            <strong>Please enable JavaScript to continue.</strong>
+        </noscript>
+        <div id="app"></div>
+        <!-- built files will be auto injected -->
+    </body>
+</html>

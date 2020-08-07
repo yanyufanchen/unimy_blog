@@ -1,0 +1,44 @@
+{
+	"pages": [{
+		"path": "pages/index/index",  // 前台首页
+		"style": {
+			"titleNView": false
+		}
+	},{
+		"path": "pages/index/page_project", // 项目
+		"style": {
+			"titleNView": false
+		}
+	},{
+		"path": "pages/index/page_post", // 文章
+		"style": {
+			"titleNView": false
+		}
+	},{
+		"path": "pages/index/page_post_detail", // 文章详情
+		"style": {
+			"titleNView": false
+		}
+	},{
+		"path": "pages/index/page_about", // 关于
+		"style": {
+			"titleNView": false
+		}
+	},{
+		"path": "pages/index/page_link", // 友情链接
+		"style": {
+			"titleNView": false
+		}
+	},{
+		"path": "pages/admin/index/index", // 后台首页
+		"style": {
+			"titleNView": false
+		}
+	},{
+		"path": "pages/admin/login/login", // 后台登录页
+		"style": {
+			"titleNView": false
+		}
+	}   
+    ]
+}
