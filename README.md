@@ -101,13 +101,8 @@
 
 2、vue官方
 
-3、
-
-1、uni-cloud-element-admin（serverless 后台管理系统）
+3、uni-cloud-element-admin（serverless 后台管理系统）
 
 演示地址:http://xl.hrai.online
 
-在使用中有任何问题，欢迎反馈给我，可以用以下联系方式跟我交流
-
-* QQ群：862889319
-* 邮件：29285674@qq.com
+留言：592394158@qq.com
