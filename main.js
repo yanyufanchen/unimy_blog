@@ -36,7 +36,14 @@ Vue.prototype.$echarts = echarts
 
 // 引入mackdown样式
 import './static/css/markdown.min.css'
-
+import hljs from 'highlight.js'
+import 'highlight.js/styles/github-gist.css' //样式文件
+Vue.directive('highlight',function (el) {
+  let blocks = el.querySelectorAll('pre code');
+  blocks.forEach((block)=>{
+    hljs.highlightBlock(block)
+  })
+})
 Vue.prototype.$store = store
 Vue.config.productionTip = false
 

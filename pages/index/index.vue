@@ -39,7 +39,7 @@
 					<LineTitle data-aos="fade-up" title="博客技术文"></LineTitle>
 					<div class="post_box"><Post :post_list="post_list"></Post></div>
 					<div class="tag">
-						<span :style="{ marginBottom: '2rem' }">
+						<span :style="{ marginBottom: '2rem' }" @click="to_post">
 							<i style="margin-right:5px" class="el-icon-thumb"></i>
 							查看更多
 						</span>
@@ -48,7 +48,7 @@
 					<LineTitle title="开源项目" data-aos="fade-up"></LineTitle>
 					<div class="project_box"><Project :project_list="project_list"></Project></div>
 					<div class="tag" data-aos="fade-up">
-						<span :style="{ marginBottom: '2rem' }">
+						<span :style="{ marginBottom: '2rem' }" @click="to_project">
 							<i style="margin-right:5px" class="el-icon-thumb"></i>
 							查看更多
 						</span>
@@ -175,14 +175,19 @@ export default {
 		// console.log('离开')
 	},
 	methods: {
-		
+		to_post(){
+			this.Uni.navigateTo('/pages/index/page_post')
+		},
+		to_project(){
+			this.Uni.navigateTo('/pages/index/page_project')
+		},
 		// 文章列表
 		async getArticleList() {
 			const res = await this.Api.sendUniCloud(this, {
 				model: 'getArticleList',
 				event: {
 					page: 0,
-					limit: 6,
+					limit: 8,
 					cate_id: -1
 				}
 			});
@@ -198,7 +203,7 @@ export default {
 				model: 'getProjectList',
 				event: {
 					page: 0,
-					limit: 6,
+					limit: 8,
 					cate_id: -1
 				}
 			});

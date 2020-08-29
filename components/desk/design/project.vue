@@ -3,10 +3,10 @@
 	<div class="project">
 		<div class="project_list">
 			<el-row :gutter="30">
-				<el-col v-for="(item, index) in project_list" :key="item._id" :xs="12" :sm="8" :md="8" :lg="6" :xl="6">
+				<el-col v-for="(item, index) in project_list" :key="item._id" :xs="24" :sm="12" :md="12" :lg="6" :xl="6">
 					<div data-aos="fade-up" class="project_item" :style="{ backgroundImage: 'url(' + item.imageUrl + ')' }">
 						<div class="content">
-							<h4 class="title">{{ item.name }}</h4>
+							<h4 class="title project_name">{{ item.name }}</h4>
 							<div class="info">{{ item.intro }}</div>
 						</div>
 						<div class="bg"></div>
@@ -165,6 +165,7 @@ export default {
 				display: block;
 			}
 			.content {
+				display: none;
 				background-color: transparent;
 				.title,
 				.info {

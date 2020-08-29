@@ -81,12 +81,14 @@ body {
 	// 文章组件
 	.desk_post .post_list {
 		.box {
-			width: 160px !important;
-			padding: 0 8px 12px 8px !important;
+			width: 100% !important;
+			border-radius: 10px;
+			padding: 0!important;
+			// padding: 0 8px 12px 8px !important;
 			a {
 				.imgBox {
-					width: 160px !important;
-					height: 100px !important;
+					width: 100% !important;
+					// height: 100px !important;
 				}
 				.source {
 					border: 1px solid #535353;
@@ -97,10 +99,12 @@ body {
 				}
 				.title {
 					margin-bottom: 8px !important;
-					font-size: 10px !important;
+					font-size: 15px !important;
 				}
 				.detail {
-					font-size: 8px !important;
+					padding: 0 10px;
+					font-size: 10px !important;
+					text-indent: 2em;
 				}
 			}
 		}
@@ -109,6 +113,27 @@ body {
 		}
 		.box > a:hover::after {
 			height: 5px !important;
+		}
+	}
+	// 项目组件
+	.project .project_list .project_item {
+		border-radius: 10px;
+		height: 300px!important;
+		.project_name {
+			font-size: 15px!important;
+			height: 40px!important;
+			line-height: 40px!important;
+		}
+		.info {
+			font-size: 15px!important;
+			line-height: 30px!important;
+			height: 60px!important;
+		}
+	}
+	.project .project_list .project_item:hover {
+		transform: scale(1)!important;
+		.content {
+			display: block!important;
 		}
 	}
 	// 关于我---图表
@@ -125,6 +150,10 @@ body {
 	// 友情链接
 	.deskLink .centent_box .content {
 		width: 320px;
+	}
+	// 尾部
+	.footer {
+		height: 100px!important;
 	}
 }
 

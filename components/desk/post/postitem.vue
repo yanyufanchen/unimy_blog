@@ -15,7 +15,7 @@
 				</div>
 			</div>
 			<div class="content " >
-				<div class="markdown-body" v-html="postDetail?postDetail.blog:''">
+				<div class="markdown-body "  v-highlight v-html="postDetail?postDetail.blog:''">
 					
 				</div>
 			</div>

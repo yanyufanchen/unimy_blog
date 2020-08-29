@@ -55,7 +55,7 @@ export default {
 	width: 40px;
 	height: 40px;
 	border: 1px solid #999;
-	border-radius: 10px;
+	border-radius: 40px;
 	// background-color: #fff;
 	i {
 		width: 40px;

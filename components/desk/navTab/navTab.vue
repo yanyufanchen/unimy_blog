@@ -61,7 +61,7 @@ export default {
 			showGithubIcon: false,
 			// 抽屉
 			drawer: false,
-			direction: 'rtl',
+			direction: 'ltr',
 			navTabList: [
 				{
 					name: '首页',

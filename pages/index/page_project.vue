@@ -38,8 +38,8 @@ import Scroll from '@/components/common/scrollprogress.vue';
 export default {
 	data() {
 		return {
-			limit: 6,
-			offset: 0,
+			limit: 8,
+			currentPage: 1, // 当前页数
 			total: 0,
 			CateId: -1, // 当前分类id
 			project_list: [], // 项目
@@ -69,25 +69,28 @@ export default {
 		// Updown
 	},
 	methods: {
-		async getProjectList(stateid) {
+		async getProjectList(stateid,key) {
 			
-			if(stateid){
-				// console.log(stateid,'切换tab栏')
+			if(stateid&&!key){
+				console.log(stateid,'切换tab栏')
 				this.project_list=[]
 				this.total=0
-				this.limit=6
-				this.offset=0
+				this.currentPage=1
+			}
+			if(stateid&&key){
+				// console.log(stateid,'分页')
+				// this.project_list=[]
 			}
 			this.CateId=stateid?stateid:-1
 			const res = await this.Api.sendUniCloud(this, {
 				model: 'getProjectList',
 				event: {
-					page: this.offset,
+					page: this.currentPage,
 					limit: this.limit,
 					cate_id: this.CateId
 				}
 			});
-			// console.log(res, '获取项目列表');
+			console.log(res, '获取项目列表');
 			if (!res.statu){
 				this.project_list=[]
 				this.total=0
@@ -112,8 +115,8 @@ export default {
 		},
 		handleCurrentChange(val) {
 			// console.log(`当前页: ${val}`);
-			this.offset=Number(val-1)*this.limit
-			this.getProjectList(this.CateId)
+			this.currentPage = val;
+			this.getProjectList(this.CateId,'changeoffset')
 		},
 	}
 };

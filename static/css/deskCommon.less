@@ -3,15 +3,15 @@ body {
 	font-family: 'Merriweather Sans', sans-serif;
 }
 // admin---图表
-	.admin_echart {
-		width: 100% !important;
-		height: 300px !important;
-		margin-bottom: 10px;
-	}
+.admin_echart {
+	width: 100% !important;
+	height: 300px !important;
+	margin-bottom: 10px;
+}
 .points {
 	-webkit-box-orient: vertical;
 	/*设置省略号在容器第四行文本后*/
-	-webkit-line-clamp: 4; 
+	-webkit-line-clamp: 4;
 	overflow: hidden;
 }
 .clearfix:after {
@@ -78,15 +78,27 @@ body {
 	.drawerBox .drawerBox_navTab_title .s_title h2 {
 		font-size: 12px !important;
 	}
+	// 文章
+	.deskPostDetail {
+		.main_content {
+			width: 100% !important;
+			box-sizing: border-box !important;
+			padding: 0 0 !important;
+			overflow: hidden !important;
+			margin-top: 0 !important;
+		}
+	}
 	// 文章组件
 	.desk_post .post_list {
 		.box {
-			width: 160px !important;
-			padding: 0 8px 12px 8px !important;
+			width: 100% !important;
+			border-radius: 10px;
+			padding: 0 !important;
+			// padding: 0 8px 12px 8px !important;
 			a {
 				.imgBox {
-					width: 160px !important;
-					height: 100px !important;
+					width: 100% !important;
+					// height: 100px !important;
 				}
 				.source {
 					border: 1px solid #535353;
@@ -97,10 +109,12 @@ body {
 				}
 				.title {
 					margin-bottom: 8px !important;
-					font-size: 10px !important;
+					font-size: 15px !important;
 				}
 				.detail {
-					font-size: 8px !important;
+					padding: 0 10px;
+					font-size: 10px !important;
+					text-indent: 2em;
 				}
 			}
 		}
@@ -111,20 +125,54 @@ body {
 			height: 5px !important;
 		}
 	}
+	// 项目组件
+	.project .project_list .project_item {
+		border-radius: 10px;
+		height: 300px !important;
+		.project_name {
+			font-size: 15px !important;
+			height: 40px !important;
+			line-height: 40px !important;
+		}
+		.info {
+			font-size: 15px !important;
+			line-height: 30px !important;
+			height: 60px !important;
+		}
+	}
+	.project .project_list .project_item:hover {
+		transform: scale(1) !important;
+		.content {
+			display: block !important;
+		}
+	}
 	// 关于我---图表
 	.about_echart {
-		width: 350px !important;
+		width: 100% !important;
 		height: 300px !important;
 		margin-bottom: 10px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
 	}
-	
+
 	// 关于我
 	.deskabout .centent_box .about_content {
-		// width: 320px;
+		width: 88%!important;
+	}
+	.build_box .build .title span {
+		font-size: 20px;
+	}
+	.build_box .build .title i {
+		font-size: 20px;
 	}
 	// 友情链接
 	.deskLink .centent_box .content {
 		width: 320px;
+	}
+	// 尾部
+	.footer {
+		height: 100px !important;
 	}
 }
 
@@ -139,6 +187,7 @@ body {
 			width: 600px;
 		}
 	}
+
 	// 文章组件
 	.desk_post .post_list {
 		.box {
@@ -176,11 +225,14 @@ body {
 	.about_echart {
 		width: 350px !important;
 		height: 350px !important;
-		margin-bottom: 20px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
 	}
+	
 	// 关于我
 	.deskabout .centent_box .about_content {
-		width: 700px!important;
+		width: 700px !important;
 	}
 	// 友情链接
 	.deskLink .centent_box .content {
@@ -246,10 +298,13 @@ body {
 		width: 250px !important;
 		height: 250px !important;
 		margin-bottom: 20px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
 	}
 	// 关于我
 	.deskabout .centent_box .about_content {
-		width: 900px!important;
+		width: 900px !important;
 	}
 	// 友情链接
 	.deskLink .centent_box .content {

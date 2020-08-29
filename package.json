@@ -13,6 +13,7 @@
     "aos": "^2.3.4",
     "echarts": "^4.8.0",
     "element-ui": "^2.13.0",
+    "highlight.js": "^10.1.2",
     "hls.js": "^0.13.2",
     "marked": "^1.1.1",
     "mavon-editor": "^2.9.0",

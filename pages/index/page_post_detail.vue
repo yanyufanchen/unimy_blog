@@ -8,29 +8,28 @@
 					<el-row :gutter="20">
 						<el-col :xs="24" :sm="24" :md="18" :lg="18" :xl="18">
 							<div class="grid-content bg-purple" style="width:100%">
-								<PostItem  :postDetail="postDetail" :cate_name="cate_name"></PostItem>
-								
+								<PostItem :postDetail="postDetail" :cate_name="cate_name"></PostItem>
+
 								<!-- 翻页 -->
 							</div>
 						</el-col>
 						<el-col class="hidden-sm-and-down" :md="6" :lg="6" :xl="6">
-							<div class="grid-content bg-purple-light" style="width:100%">
-								<PostDSide :post_list="post_list"></PostDSide>
-							</div>
+							<div class="grid-content bg-purple-light" style="width:100%"><PostDSide :post_list="post_list"></PostDSide></div>
 						</el-col>
 					</el-row>
 				</div>
 			</el-main>
 			<!-- <Scroll :themeColor="this.$store.state.Desktheme.ThemeColor"></Scroll> -->
-			<el-footer style="margin:0;padding:0">
-				<Footer></Footer>
-			</el-footer>
+			<el-footer style="margin:0;padding:0"><Footer></Footer></el-footer>
 		</el-container>
 	</div>
 </template>
 <script>
 import { mapState } from 'vuex';
-import marked from 'marked'
+import marked from 'marked';
+import hljs from 'highlight.js'
+
+
 import Header from '@/components/desk/header/header.vue';
 import LineTitle from '@/components/desk/design/line_title.vue';
 import PostList from '@/components/desk/post/postlist.vue';
@@ -41,7 +40,23 @@ import PostDSide from '@/components/desk/post/postdetail_side.vue';
 import Footer from '@/components/desk/design/footer.vue';
 import Scroll from '@/components/common/scrollprogress.vue';
 // import Updown from '@/components/desk/design/updown.vue';
-
+marked.setOptions({
+    renderer: new marked.Renderer(),
+    gfm: true,
+    tables: true,
+    breaks: false,
+    pedantic: false,
+    sanitize: false,
+    smartLists: true,
+    smartypants: false,
+    highlight: function (code, lang) {
+          if (lang && hljs.getLanguage(lang)) {    
+            return hljs.highlight(lang, code, true).value;
+          } else {
+            return hljs.highlightAuto(code).value;
+          }
+      }
+  });
 export default {
 	data() {
 		return {
@@ -53,15 +68,14 @@ export default {
 		};
 	},
 	created() {
-		
 		// console.log(this.Utils.getRouteData(),'详情2')
-		let catedata=this.Utils.getRouteData().catedata
-		
-		this.id=this.Utils.getRouteData().id
-		let cate_name=this.Utils.getRouteData().cate_name
-		this.cate_name= this.Utils.GetUrlByParamName('cate_name')
+		let catedata = this.Utils.getRouteData().catedata;
+
+		this.id = this.Utils.getRouteData().id;
+		let cate_name = this.Utils.getRouteData().cate_name;
+		this.cate_name = this.Utils.GetUrlByParamName('cate_name');
 		// console.log(str,11)
-		this.getpostDetail()
+		this.getpostDetail();
 		this.getPostList();
 	},
 	mounted() {},
@@ -81,12 +95,12 @@ export default {
 		// ColorPicker,
 		// Aplayer,
 		// Design,
-		Footer,
+		Footer
 		// Updown
 	},
 	onLoad() {},
 	methods: {
-		async getpostDetail(){
+		async getpostDetail() {
 			const res = await this.Api.sendUniCloud(this, {
 				model: 'getArticle',
 				event: {
@@ -94,15 +108,31 @@ export default {
 				}
 			});
 			// console.log(res, '请求云函数');
-			if(!res.statu){
+			if (!res.statu) {
 				// console.log('获取失败')
-				return
+				return;
 			}
-			this.postDetail=res.data.data[0]
-			this.postDetail.time=this.Time.formatTime(this.postDetail.create_date,'Y-M-D')
-			this.postDetail.blog = marked(this.postDetail.content)
+			this.postDetail = res.data.data[0];
+			this.postDetail.time = this.Time.formatTime(this.postDetail.create_date, 'Y-M-D');
+			
+			// marked.setOptions({
+			//           renderer: new marked.Renderer(),
+			//           highlight: function(code) {
+			//             return hljs.highlightAuto(code).value;
+			//           },
+			//           pedantic: false,
+			//           gfm: true,
+			//           tables: true,
+			//           breaks: false,
+			//           sanitize: false,
+			//           smartLists: true,
+			//           smartypants: false,
+			//           xhtml: false
+			//         }
+			//       );
+			this.postDetail.blog = marked(this.postDetail.content);
 		},
-		
+
 		async getPostList() {
 			const res = await this.Api.sendUniCloud(this, {
 				model: 'getArticleReadMax',
@@ -113,15 +143,15 @@ export default {
 			});
 			// console.log(res, '获取文章排行列表');
 			if (!res.statu) return;
-			this.post_list = res.data
-		},
+			this.post_list = res.data;
+		}
 	}
 };
 </script>
 
 <style lang="less" scoped>
 .deskPostDetail {
-	background-color: #F9F9F9;
+	background-color: #f9f9f9;
 	.el-main {
 		width: 100%;
 		box-sizing: border-box;

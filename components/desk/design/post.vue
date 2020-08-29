@@ -4,7 +4,7 @@
 		
 		<div class="post_list" >
 			<el-row :gutter="30">
-				<el-col  v-for="(item, index) in post_list" :key="index" :xs="12" :sm="8" :md="6" :lg="6" :xl="6">
+				<el-col  v-for="(item, index) in post_list" :key="index" :xs="24" :sm="8" :md="6" :lg="6" :xl="6">
 					<div class="box" data-aos="fade-up"  @click="to_detail(item,index)" @mouseover="overPost" @mouseout="outPost">
 						<a href="#">
 							<div class="imgBox"><img :src="item.imageUrl" alt="" /></div>
