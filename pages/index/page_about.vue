@@ -221,6 +221,9 @@ export default {
 <style lang="less" scoped>
 .deskabout {
 	background-color: #f9f9f9;
+	.build_box {
+		width: 100%;
+	}
 	.centent_box {
 		z-index: 1000;
 		width: 100%;

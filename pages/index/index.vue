@@ -1,6 +1,6 @@
 <template>
 	<div class="deskIndex" id="deskIndex">
-		<!-- <NavTab></NavTab> -->
+		
 		<el-container>
 			<el-header class="deskBanner" height="100vh" :style="{ backgroundImage: 'url(' + headerBgimg + ')' }">
 				<div class="dingwei"><NavTab></NavTab></div>
@@ -11,6 +11,7 @@
 					<div class="title" :style="{ color: this.$store.state.Desktheme.ThemeColor }">
 						<i class="fa fa-music" :style="{ marginRight: '5px' }"></i>
 						&nbsp;&nbsp;听听音乐
+						<wb:login-button type="3,2" onlogin="login" onlogout="logout">登录按钮</wb:login-button>
 					</div>
 					<Aplayer class="aplayer" :audio="audio"></Aplayer>
 				</div>

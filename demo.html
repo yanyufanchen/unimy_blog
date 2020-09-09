@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<!-- 微博授权命名 -->
+<html lang="zh-CN" xmlns:wb="http://open.weibo.com/wb">
 	<head>
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
@@ -17,7 +18,15 @@
 			})
 		</script>
 		<link rel="stylesheet" href="<%= BASE_URL %>static/index.<%= VUE_APP_INDEX_CSS_HASH %>.css" />
-		
+		<!-- 微博授权 -->
+		<script src="http://tjs.sjs.sinajs.cn/open/api/js/wb.js?appkey=3399402182" type="text/javascript" charset="utf-8"></script>
+		<!-- 调试模式 -->
+		<script src="https://cdn.bootcss.com/vConsole/3.2.2/vconsole.min.js"></script>
+		<script>
+			var vConsole = new VConsole();
+			console.log('hello world')
+		</script>
+
 		<style>
 			body {
 				margin: 0;
@@ -169,7 +178,7 @@
 	</head>
 
 	<body>
-		 
+
 		<noscript>
 			<strong>Please enable JavaScript to continue.</strong>
 		</noscript>
