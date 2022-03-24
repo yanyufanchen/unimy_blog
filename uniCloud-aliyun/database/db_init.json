@@ -19,18 +19,7 @@
 			}
 		}]
 	},
-	"article": {
-		"data": [{
-			"title": "vue112212121",
-			"content": "testtesttesttesttesttest",
-			"cate_id": 1,
-			"content":"111",
-			"info":"1",
-			"imageUrl":"1",
-			"create_date": 1590909755111,
-			"delete_date": "0"
-		}]
-	},
+	
 	"articleCate": {
 		"data": [{
 			"cate_id": 1,

@@ -1,14 +1,14 @@
 'use strict'
 const db = uniCloud.database()
 
-let aboutMe = require('./aboutMe.js')
-let log = require('./log.js')
-let article = require('./article.js')
-let project = require('./project.js')
+// let aboutMe = require('./aboutMe.js')
+// let log = require('./log.js')
+// let article = require('./article.js')
+// let project = require('./project.js')
 let login = require('./login.js')
-let desktheme = require('./desktheme.js')
-let websizeCount = require('./websizeCount.js')
-let webLink = require('./webLink.js')
+// let desktheme = require('./desktheme.js')
+// let websizeCount = require('./websizeCount.js')
+// let webLink = require('./webLink.js')
 
 exports.main = async (event, context) => { // event={mode:getArticleList//要请求的方法,传参}
 	if (event.model == 'login') { // 登录-
