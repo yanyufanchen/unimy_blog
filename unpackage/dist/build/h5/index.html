@@ -1,0 +1,149 @@
+<!DOCTYPE html><html lang=zh-CN xmlns:wb=http://open.weibo.com/wb><head><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge,chrome=1"><meta name=description content=Web前端开发:一个分享前端开发技术,记录学习和成长的博客,博客文章的前端个人博客网站！><meta name=keywords content=王朋前端博客,web前端博客,web前端开发,小程序开发,Reactjs开发,Vuejs开发,ReactNative开发,Nodejs开发,专注前端技术><meta name=viewport content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1,minimum-scale=1"><meta name=baidu-site-verification content=qh2vFCwb2Z><title>Web前端开发:一个分享前端开发技术</title><link rel=icon href=/unimy_blog/static/logo.png><script>document.addEventListener('DOMContentLoaded', function() {
+				document.documentElement.style.fontSize = document.documentElement.clientWidth / 20 + 'px'
+			})</script><link rel=stylesheet href=/unimy_blog/static/index.a5c69d49.css><script>// var vConsole = new VConsole();
+			// console.log('hello world')</script><style>body {
+				margin: 0;
+				padding: 0;
+			}
+
+			.row_flex {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+
+			ul,
+			li {
+				padding: 0;
+				margin: 0;
+				list-style: none
+			}
+
+
+			/*小屏幕下(手机类)的样式*/
+			@media only screen and (max-width: 901px) {
+				.demo_tab {
+					width: 100%;
+				}
+
+				.demo_tab_name {
+					font-size: 20px;
+					color: #fff;
+				}
+
+				.demo_tabNav {
+					display: none;
+				}
+
+				.tab_li_txt {
+					line-height: 30px;
+					font-size: 10px;
+					color: #fff;
+				}
+
+				.bannerbox {
+					width: 100%;
+					height: 100vh;
+					display: flex;
+					flex-direction: column;
+					justify-content: center;
+					align-items: center;
+				}
+
+				.bannerbox_title {
+					font-size: 25px;
+					font-weight: 540;
+					color: #fff;
+				}
+
+				.bannerbox_text {
+					font-size: 15px;
+					font-weight: 540;
+					color: #fff;
+				}
+
+				.bannerbox_btn {
+					margin-top: 20px;
+					width: 55%;
+					display: flex;
+					justify-content: space-between;
+					align-items: center;
+				}
+
+				.btn_left,
+				.btn_right {
+					font-size: 13px;
+					color: #fff;
+					height: 40px;
+					padding: 0 20px;
+					margin-right: 10px;
+					line-height: 40px;
+					border-radius: 40px;
+					border: 1px solid #fff;
+				}
+			}
+
+			/*宽屏的样式*/
+			@media only screen and (min-width: 910px) {
+				.demo_tab {
+					width: 400px;
+				}
+
+				.demo_tab_name {
+					font-size: 30px;
+					color: #fff;
+				}
+
+				.demo_tabNav {
+					flex: 1;
+					margin-right: 100px;
+				}
+
+				.tab_li_txt {
+					line-height: 60px;
+					font-size: 15px;
+					color: #fff;
+				}
+
+				.bannerbox {
+					width: 100%;
+					height: 100vh;
+					display: flex;
+					flex-direction: column;
+					justify-content: center;
+					align-items: center;
+				}
+
+				.bannerbox_title {
+					font-size: 60px;
+					font-weight: 540;
+					color: #fff;
+				}
+
+				.bannerbox_text {
+					font-size: 30px;
+					font-weight: 540;
+					color: #fff;
+				}
+
+				.bannerbox_btn {
+					margin-top: 50px;
+					width: 35%;
+					display: flex;
+					justify-content: space-between;
+					align-items: center;
+				}
+
+				.btn_left,
+				.btn_right {
+					font-size: 23px;
+					color: #fff;
+					height: 60px;
+					padding: 0 40px;
+					margin-right: 40px;
+					line-height: 60px;
+					border-radius: 60px;
+					border: 1px solid #fff;
+				}
+
+			}</style></head><body><noscript><strong>Please enable JavaScript to continue.</strong></noscript><div id=app><header style="width:100%;height:100vh;background:#ccc;background-image: url(https://www.pengwang.xyz/static/medias/banner/0.jpg);"><nav class=row_flex style="width:100%;height:80px;position: fixed;"><div class="row_flex demo_tab" style=""><img style=width:40px;height:40px;margin-left:30px;margin-right:10px src=https://www.pengwang.xyz/logo.png><h1 class=demo_tab_name style="">Wang Peng'blog</h1></div><ul class="row_flex demo_tabNav" style=""><li class="tab_li_txt row_flex" style=flex:1;><i class="fa fa-home"></i> <span>首页</span></li><li class="tab_li_txt row_flex" style=flex:1><i class=el-icon-s-flag></i> <span>实战项目</span></li><li class="tab_li_txt row_flex" style=flex:1><i class=el-icon-tickets></i> <span>技术文章</span></li><li class="tab_li_txt row_flex" style=flex:1><i class="fa fa-user-circle-o"></i> <span>关于我</span></li><li class="tab_li_txt row_flex" style=flex:1><i class="fa fa-address-book"></i> <span>友情链接</span></li></ul></nav><div style="width:100%;height:100vh;background: rgba(156, 39, 176, 0.65);"><div class=bannerbox><h1 class=bannerbox_title>大前端开发技术分享</h1><h2 class=bannerbox_text>基于uniCloud云开发平台而生的全栈博客项目</h2><div class="bannerbox_btn row_flex"><div class=btn_left><i class="fa fa-angle-double-down"></i> <span style=margin-left:10px;>继续阅读</span></div><div class=btn_right><i class="fa fa-github"></i> <span style=margin-left:10px;>GITGUB</span></div></div></div></div></header></div><script src=/unimy_blog/static/js/chunk-vendors.590b00a0.js></script><script src=/unimy_blog/static/js/index.a7be9deb.js></script></body></html>
