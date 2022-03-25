@@ -11,7 +11,7 @@
 		<title>
 			Web前端开发:一个分享前端开发技术
 		</title>
-		<link rel=icon href="https://www.pengwang.xyz/logo.png">
+		<link rel=icon href="<%= BASE_URL %>static/logo.png">
 		<script>
 			document.addEventListener('DOMContentLoaded', function() {
 				document.documentElement.style.fontSize = document.documentElement.clientWidth / 20 + 'px'
@@ -19,12 +19,12 @@
 		</script>
 		<link rel="stylesheet" href="<%= BASE_URL %>static/index.<%= VUE_APP_INDEX_CSS_HASH %>.css" />
 		<!-- 微博授权 -->
-		<script src="http://tjs.sjs.sinajs.cn/open/api/js/wb.js?appkey=3399402182" type="text/javascript" charset="utf-8"></script>
+		<!-- <script src="http://tjs.sjs.sinajs.cn/open/api/js/wb.js?appkey=3399402182" type="text/javascript" charset="utf-8"></script> -->
 		<!-- 调试模式 -->
-		<script src="https://cdn.bootcss.com/vConsole/3.2.2/vconsole.min.js"></script>
+		<!-- <script src="https://cdn.bootcss.com/vConsole/3.2.2/vconsole.min.js"></script> -->
 		<script>
-			var vConsole = new VConsole();
-			console.log('hello world')
+			// var vConsole = new VConsole();
+			// console.log('hello world')
 		</script>
 
 		<style>

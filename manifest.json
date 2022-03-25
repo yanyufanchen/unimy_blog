@@ -79,7 +79,8 @@
         "title" : "王朋前端博客 | web前端技术博客 |WEB前端开发",
         "domain" : "www.pengwang.xyz",
         "router" : {
-            "mode" : "hash"
+            "mode" : "hash",
+            "base" : "/unimy_blog/"
         },
         "template" : "demo.html"
     }

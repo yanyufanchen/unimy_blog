@@ -187,7 +187,7 @@ export default {
 			const res = await this.Api.sendUniCloud(this, {
 				model: 'getArticleList',
 				event: {
-					page: 0,
+					page: 1,
 					limit: 8,
 					cate_id: -1
 				}
@@ -203,7 +203,7 @@ export default {
 			const res = await this.Api.sendUniCloud(this, {
 				model: 'getProjectList',
 				event: {
-					page: 0,
+					page: 1,
 					limit: 8,
 					cate_id: -1
 				}

@@ -22,8 +22,9 @@ export default class Api {
 					  loadingInstance.close();
 					});
 				}
-				if (res.success) {
-					// console.log(res,'请求云函数')
+				// console.log(res,'请求云函数')
+				if (res.result.statu) {
+					
 					resolve(res.result)
 					
 				}else {

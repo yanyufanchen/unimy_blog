@@ -135,7 +135,7 @@ export default {
 					
 				}
 			});
-			console.log(res, '获取友情链接');
+			// console.log(res, '获取友情链接');
 			if (!res.statu) return;
 			this.LinkList = res.data;
 			this.stateflagList[0]=this.LinkList.some(item=>item.state==1)
