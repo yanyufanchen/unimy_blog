@@ -11,7 +11,6 @@
 					<div class="title" :style="{ color: this.$store.state.Desktheme.ThemeColor }">
 						<i class="fa fa-music" :style="{ marginRight: '5px' }"></i>
 						&nbsp;&nbsp;听听音乐
-						<wb:login-button type="3,2" onlogin="login" onlogout="logout">登录按钮</wb:login-button>
 					</div>
 					<Aplayer class="aplayer" :audio="audio"></Aplayer>
 				</div>

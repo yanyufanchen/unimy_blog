@@ -259,25 +259,25 @@ export default {
 		geteHeaderBgimg() {
 			let bannerList = [
 				{
-					url: '../../../static/medias/banner/0.jpg'
+					url: './static/medias/banner/0.jpg'
 				},
 				{
-					url: '../../../static/medias/banner/1.jpg'
+					url: './static/medias/banner/1.jpg'
 				},
 				{
-					url: '../../../static/medias/banner/2.jpg'
+					url: './static/medias/banner/2.jpg'
 				},
 				{
-					url: '../../../static/medias/banner/3.jpg'
+					url: './static/medias/banner/3.jpg'
 				},
 				{
-					url: '../../../static/medias/banner/4.jpg'
+					url: './static/medias/banner/4.jpg'
 				},
 				{
-					url: '../../../static/medias/banner/5.jpg'
+					url: './static/medias/banner/5.jpg'
 				},
 				{
-					url: '../../../static/medias/banner/6.jpg'
+					url: './static/medias/banner/6.jpg'
 				}
 			];
 			// 修复切换背景图时出现的“白色闪屏”现象
@@ -286,6 +286,7 @@ export default {
 			img.src = bannerList[num].url;
 			// 确定图片加载完成后再进行背景图片切换
 			img.onload = () => {
+				console.log(img.src,'图片背景')
 				this.$store.commit('editHeaderBgimg', img.src);
 			};
 			let Num = 0;
