@@ -90,21 +90,21 @@ export default {
 				{
 					title: '陈奕迅 - 红玫瑰',
 					artist: '陈奕迅',
-					src: '../../../static/medias/music/陈奕迅 - 红玫瑰.mp3',
-					pic: '../../../static/medias/music/libai.jpg',
+					src: './static/medias/music/陈奕迅 - 红玫瑰.mp3',
+					pic: './static/medias/music/libai.jpg',
 					lrc: '[00:00.00]APlayer\n[00:04.01]is\n[00:08.02]amazing'
 				},
 				{
 					title: '陈奕迅 - 一丝不挂',
 					artist: '陈奕迅',
-					src: '../../../static/medias/music/陈奕迅 - 一丝不挂.mp3',
-					pic: '../../../static/medias/music/libai.jpg',
-					lrc: '../../../static/medias/music/红玫瑰_歌词.lrc'
+					src: './static/medias/music/陈奕迅 - 一丝不挂.mp3',
+					pic: './static/medias/music/libai.jpg',
+					lrc: './static/medias/music/红玫瑰_歌词.lrc'
 				},{
 					title: '李荣浩 - 李白',
 					artist: '李荣浩',
-					src: '../../../static/medias/music/李荣浩 - 李白.mp3',
-					pic: '../../../static/medias/music/libai.jpg',
+					src: './static/medias/music/李荣浩 - 李白.mp3',
+					pic: './static/medias/music/libai.jpg',
 					lrc: '[00:02.64]红玫瑰\n[00:04.95]演唱：陈奕迅\n[00:06.08]11'
 				}
 			],

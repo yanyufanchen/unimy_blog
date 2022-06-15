@@ -13,7 +13,7 @@
 - Markdown编辑器（）
 - vue2.x（）
 - vueX（）
-- ​
+- 
 
 #### 运行项目
 
@@ -91,6 +91,15 @@
 				img.onload = ()=> {
 					this.$('.el-header').css("background-image","url(" + img.src + ")");
 				}
+```
+
+#### 更新日志
+
+#### 更新计划
+
+```
+1、增加token写入
+2、增加云函数token校验
 ```
 
 
